@@ -36,6 +36,10 @@ public class ResultMapTest {
     * a>级联属性赋值
     * b>association
     * c>分步查询
+    *
+    * 处理一对多的映射关系
+    * a>collection
+    * b>分步查询
     * */
 
     @Test
@@ -65,12 +69,21 @@ public class ResultMapTest {
         System.out.println("++++++++++++++++++++++++++++++");
         System.out.println(emp.getDept());
     }
-
+    // 1对多
     @Test
     public void testDeptAndEmpResultMap(){
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         DeptMapper mapper = sqlSession.getMapper(DeptMapper.class);
         Dept dept = mapper.getDeptAndEmp(1);
+        System.out.println(dept);
+    }
+
+    // 1对多-分步查询
+    @Test
+    public void testGetDeptAndEmpByStep(){
+        SqlSession sqlSession = SqlSessionUtils.getSqlSession();
+        DeptMapper mapper = sqlSession.getMapper(DeptMapper.class);
+        Dept dept = mapper.getDeptAndEmpByStepOne(1);
         System.out.println(dept);
     }
 }
