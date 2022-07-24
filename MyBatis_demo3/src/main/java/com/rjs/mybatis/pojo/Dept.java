@@ -1,5 +1,7 @@
 package com.rjs.mybatis.pojo;
 
+import java.util.List;
+
 /**
  * @author: 软件手
  * @date: 2022/7/24 8:38
@@ -8,6 +10,16 @@ package com.rjs.mybatis.pojo;
 public class Dept {
     private Integer did;
     private String deptName;
+
+    public List<Emp> getEmps() {
+        return emps;
+    }
+
+    public void setEmps(List<Emp> emps) {
+        this.emps = emps;
+    }
+
+    private List<Emp> emps;
 
     public Integer getDid() {
         return did;
@@ -38,6 +50,7 @@ public class Dept {
         return "Dept{" +
                 "did=" + did +
                 ", deptName='" + deptName + '\'' +
+                ", emps=" + emps +
                 '}';
     }
 }
