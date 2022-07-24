@@ -64,14 +64,14 @@ public class Emp {
         this.email = email;
     }
 
-    public Emp(Integer eid, String empName, Integer age, String sex, String email, Dept dept) {
-        this.eid = eid;
-        this.empName = empName;
-        this.age = age;
-        this.sex = sex;
-        this.email = email;
-        this.dept = dept;
-    }
+//    public Emp(Integer eid, String empName, Integer age, String sex, String email, Dept dept) {
+//        this.eid = eid;
+//        this.empName = empName;
+//        this.age = age;
+//        this.sex = sex;
+//        this.email = email;
+//        this.dept = dept;
+//    }
 
     public Emp(Integer eid, String empName, Integer age, String sex, String email) {
         this.eid = eid;

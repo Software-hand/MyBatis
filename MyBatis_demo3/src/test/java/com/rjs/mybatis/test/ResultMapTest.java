@@ -1,3 +1,4 @@
+package com.rjs.mybatis.test;
 
 import com.rjs.mybatis.mapper.DeptMapper;
 import com.rjs.mybatis.mapper.EmpMapper;
@@ -86,4 +87,6 @@ public class ResultMapTest {
         Dept dept = mapper.getDeptAndEmpByStepOne(1);
         System.out.println(dept);
     }
+
+
 }

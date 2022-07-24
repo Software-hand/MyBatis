@@ -3,7 +3,7 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/MyBatis_demo2/src/main/java/com/rjs/mybatis/utils/SqlSessionUtils.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MyBatis_demo2/src/test/java/ParameterMapperTest.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/MyBatis_demo3/src/test/java/ResultMapTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MyBatis_demo3/src/test/java/com/rjs/mybatis/test/ResultMapTest.java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
