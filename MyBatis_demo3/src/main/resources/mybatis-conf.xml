@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--引入jdbc.properties 文件-->
+    <properties resource="jdbc.properties"></properties>
+
+    <!--设置MyBatis的全局配置-->
+    <settings>
+        <!--是否开启驼峰命名自动映射，即从经典数据库列名 A_COLUMN 映射到经典 Java 属性名 aColumn。  默认：false-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+
+    <!--设置类型别名-->
+    <typeAliases>
+
+        <!--        <typeAlias type="com.rjs.mybatis.pojo.User" ></typeAlias>-->
+        <!--以包为单位，将包下所有的类型设置默认的类型别名，即类型且不区分大小写-->
+        <package name="com.rjs.mybatis.pojo"/>
+    </typeAliases>
+
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <!--<mapper resource="mappers/UserMapper.xml"/>-->
+        <package name="com.rjs.mybatis.mapper"/>
+    </mappers>
+</configuration>
