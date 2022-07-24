@@ -10,9 +10,11 @@
     <settings>
         <!--是否开启驼峰命名自动映射，即从经典数据库列名 A_COLUMN 映射到经典 Java 属性名 aColumn。  默认：false-->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!--开启延迟加载-->
+        <setting name="lazyLoadingEnabled" value="true"/>
     </settings>
 
-
+    
     <!--设置类型别名-->
     <typeAliases>
 

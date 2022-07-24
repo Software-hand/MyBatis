@@ -81,10 +81,14 @@
         <!--
             select:设置分步查询的sql的唯一标识（namespace.SQLId或mapper接口的全类名.方法）
             column:设置分步查询的条件
+            fetchType:当开启全局的延迟加载，可通过此属性手动控制延迟加载的效果
+                lazy-延迟   eager-立即
         -->
         <association property="dept"
                      select="com.rjs.mybatis.mapper.DeptMapper.getEmpAndDeptByStepTwo"
-                     column="did">
+                     column="did"
+                     fetchType="lazy"
+        >
         </association>
     </resultMap>
     <!-- Emp getEmpAndDeptByStepOne(@Param("id") Integer eid);-->

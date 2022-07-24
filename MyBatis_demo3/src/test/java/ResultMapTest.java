@@ -53,11 +53,14 @@ public class ResultMapTest {
         System.out.println(emp);
     }
 
+    //  c>分步查询
     @Test
     public void testGetEmpAndDeptByStepOne(){
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
         Emp emp = mapper.getEmpAndDeptByStepOne(3);
-        System.out.println(emp);
+        System.out.println(emp.getEmpName());
+        System.out.println("++++++++++++++++++++++++++++++");
+        System.out.println(emp.getDept());
     }
 }
