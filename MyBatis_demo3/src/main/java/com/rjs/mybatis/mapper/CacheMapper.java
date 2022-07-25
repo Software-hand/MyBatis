@@ -12,4 +12,5 @@ public interface CacheMapper {
 
     Emp getEmpByEid(@Param("eid") Integer eid);
 
+    void insertEmp(Emp emp);
 }
